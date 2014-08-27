@@ -6,7 +6,7 @@
  *
  * http://www.opensource.org/licenses/bsd-license.php
  */
-package jline;
+package jline.terminal;
 
 import jline.internal.Log;
 import jline.internal.TerminalLineSettings;

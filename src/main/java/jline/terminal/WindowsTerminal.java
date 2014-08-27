@@ -6,7 +6,7 @@
  *
  * http://www.opensource.org/licenses/bsd-license.php
  */
-package jline;
+package jline.terminal;
 
 import java.io.FileDescriptor;
 import java.io.FileInputStream;
@@ -17,11 +17,10 @@ import jline.internal.Configuration;
 import jline.internal.Log;
 import org.fusesource.jansi.internal.WindowsSupport;
 
-import static jline.WindowsTerminal.ConsoleMode.ENABLE_ECHO_INPUT;
-import static jline.WindowsTerminal.ConsoleMode.ENABLE_LINE_INPUT;
-import static jline.WindowsTerminal.ConsoleMode.ENABLE_PROCESSED_INPUT;
-import static jline.WindowsTerminal.ConsoleMode.ENABLE_WINDOW_INPUT;
-import static jline.internal.Preconditions.checkNotNull;
+import static jline.terminal.WindowsTerminal.ConsoleMode.ENABLE_ECHO_INPUT;
+import static jline.terminal.WindowsTerminal.ConsoleMode.ENABLE_LINE_INPUT;
+import static jline.terminal.WindowsTerminal.ConsoleMode.ENABLE_PROCESSED_INPUT;
+import static jline.terminal.WindowsTerminal.ConsoleMode.ENABLE_WINDOW_INPUT;
 
 /**
  * Terminal implementation for Microsoft Windows. Terminal initialization in
@@ -53,9 +52,13 @@ import static jline.internal.Preconditions.checkNotNull;
 public class WindowsTerminal
     extends TerminalSupport
 {
-    public static final String DIRECT_CONSOLE = WindowsTerminal.class.getName() + ".directConsole";
+    // Use the same property names as jline version 1 even though class has
+    // moved from package {@code jline} to {@code jline.terminal}.
+    public static final String BASE = "jline.WindowsTerminal";
 
-    public static final String ANSI = WindowsTerminal.class.getName() + ".ansi";
+    public static final String DIRECT_CONSOLE = BASE + ".directConsole";
+
+    public static final String ANSI = BASE + ".ansi";
 
     private boolean directConsole;
 

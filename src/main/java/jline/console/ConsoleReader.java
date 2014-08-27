@@ -38,9 +38,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Stack;
 
-import jline.Terminal;
-import jline.TerminalFactory;
-import jline.UnixTerminal;
 import jline.console.completer.CandidateListCompletionHandler;
 import jline.console.completer.Completer;
 import jline.console.completer.CompletionHandler;
@@ -52,6 +49,9 @@ import jline.internal.Log;
 import jline.internal.NonBlockingInputStream;
 import jline.internal.Nullable;
 import jline.internal.Urls;
+import jline.terminal.Terminal;
+import jline.terminal.TerminalFactory;
+import jline.terminal.UnixTerminal;
 import org.fusesource.jansi.AnsiOutputStream;
 
 import static jline.internal.Preconditions.checkNotNull;
@@ -60,7 +60,7 @@ import static jline.internal.Preconditions.checkNotNull;
  * A reader for console applications. It supports custom tab-completion,
  * saveable command history, and command line editing. On some platforms,
  * platform-specific commands will need to be issued before the reader will
- * function properly. See {@link jline.Terminal#init} for convenience
+ * function properly. See {@link jline.terminal.Terminal#init} for convenience
  * methods for issuing platform-specific setup commands.
  *
  * @author <a href="mailto:mwp1@cornell.edu">Marc Prud'hommeaux</a>

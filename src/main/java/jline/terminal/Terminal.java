@@ -6,7 +6,7 @@
  *
  * http://www.opensource.org/licenses/bsd-license.php
  */
-package jline;
+package jline.terminal;
 
 import java.io.IOException;
 import java.io.InputStream;

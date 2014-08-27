@@ -6,7 +6,7 @@
  *
  * http://www.opensource.org/licenses/bsd-license.php
  */
-package jline;
+package jline.terminal;
 
 import java.text.MessageFormat;
 import java.util.HashMap;
@@ -14,7 +14,6 @@ import java.util.Map;
 
 import jline.internal.Configuration;
 import jline.internal.Log;
-import jline.internal.Preconditions;
 
 import static jline.internal.Preconditions.checkNotNull;
 

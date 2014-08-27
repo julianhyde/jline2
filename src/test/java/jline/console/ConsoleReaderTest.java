@@ -14,11 +14,11 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import jline.TerminalFactory;
-import jline.WindowsTerminal;
 import jline.console.history.History;
 import jline.console.history.MemoryHistory;
 import jline.internal.Configuration;
+import jline.terminal.TerminalFactory;
+import jline.terminal.WindowsTerminal;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

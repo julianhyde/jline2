@@ -12,7 +12,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import jline.TerminalSupport;
+import jline.terminal.TerminalSupport;
 import org.junit.Before;
 
 import static org.junit.Assert.assertEquals;
